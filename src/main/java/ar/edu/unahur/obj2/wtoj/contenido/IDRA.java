@@ -1,6 +1,6 @@
 package ar.edu.unahur.obj2.wtoj.contenido;
 
-//PAtron Singletlon para que yo haya uno
+//Patron Singletlon para que yo haya uno
 
 public class IDRA {
     //Atributos
@@ -14,10 +14,9 @@ public class IDRA {
     private Double canon = 0.5;
 
     //Constructor: Se debe ocultar el constructor para el patron singleton
-    private IDRA() {
-    }
+    private IDRA() {}
 
-    //getter de la unica instancia paa que los atributos sean privados
+    //getter de la unica instancia para que los atributos sean privados
     public static IDRA getInstance() {
         return instance;
     }

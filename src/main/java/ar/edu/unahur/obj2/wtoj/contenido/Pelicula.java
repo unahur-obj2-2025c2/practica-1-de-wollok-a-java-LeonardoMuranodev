@@ -10,5 +10,4 @@ public class Pelicula extends Contenido {
     protected Double doCosto() {
         return 0.00;
     }
-
 }

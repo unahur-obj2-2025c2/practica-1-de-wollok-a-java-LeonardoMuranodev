@@ -18,7 +18,7 @@ public class Temporada {
     }
 
     public List<Episodio> getEpisodios() {
-        return episodios;
+        return new ArrayList<>(episodios);
     }
 
     public Integer getNumero() {

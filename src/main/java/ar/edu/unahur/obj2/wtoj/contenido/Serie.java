@@ -33,7 +33,7 @@ public class Serie extends Contenido {
 
     //Getter de temporada
     public List<Temporada> getTemporadas() {
-        return temporadas;
+        return new ArrayList<>(temporadas);
     }
 
     //Agregar o eliminar temporadas

@@ -1,7 +1,8 @@
 package ar.edu.unahur.obj2.wtoj.planes;
 
-import ar.edu.unahur.obj2.wtoj.Usuario.Usuario;
 import ar.edu.unahur.obj2.wtoj.contenido.*;
+import ar.edu.unahur.obj2.wtoj.usuario.Usuario;
+
 import java.util.List;
 
 /*EN la interfaz no se hereda, sino quu se implement la interfaz que vamos a utilizar, usando la palabra reservada implements*/
@@ -37,8 +38,8 @@ public class PlanBasico implements Planeable {
         this.costoFijo = costoFijo;
     }
 
-    protected Double costoTotal(Usuario usuario) {
-        
+    @Override
+    public Double costoPlan(Usuario usuario) {
         List <Contenido> contenido = usuario.getContenidosVistos();
         if (this.limite >= contenido.size()) {
             return costoFijo;
@@ -46,10 +47,5 @@ public class PlanBasico implements Planeable {
             List <Contenido> excedentes = contenido.subList(this.limite, contenido.size());
             return costoFijo + excedentes.stream().mapToDouble(e -> e.costo()).sum();
         }
-    }
-
-    @Override
-    public Double costoPlan(Usuario usuario) {
-        return this.costoTotal(usuario);
     }
 }

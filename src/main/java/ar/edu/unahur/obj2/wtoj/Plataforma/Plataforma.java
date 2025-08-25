@@ -1,9 +1,9 @@
-package ar.edu.unahur.obj2.wtoj.Plataforma;
+package ar.edu.unahur.obj2.wtoj.plataforma;
 
 import java.util.List;
 
-import ar.edu.unahur.obj2.wtoj.Usuario.Usuario;
 import ar.edu.unahur.obj2.wtoj.contenido.IDRA;
+import ar.edu.unahur.obj2.wtoj.usuario.Usuario;
 
 import java.util.ArrayList;
 
@@ -25,11 +25,19 @@ public class Plataforma {
         usuarios.stream().forEach(u -> u.limpiarContenido());
     }
 
-    public void agregarUsuarios(Usuario usuarioNuevo) {
+    public void agregarUsuario(Usuario usuarioNuevo) {
         this.usuarios.add(usuarioNuevo);
     }
 
     public void eliminarUsuario(Usuario usuarioAEliminar) {
         this.usuarios.remove(usuarioAEliminar);
+    }
+
+    public void limpiarUsuarios() {
+        this.usuarios.clear();
+    }
+
+    public List<Usuario> getUsuarios() {
+        return usuarios;
     }
 }

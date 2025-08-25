@@ -1,4 +1,4 @@
-package ar.edu.unahur.obj2.wtoj.Usuario;
+package ar.edu.unahur.obj2.wtoj.usuario;
 
 import ar.edu.unahur.obj2.wtoj.contenido.*;
 import ar.edu.unahur.obj2.wtoj.planes.*;
